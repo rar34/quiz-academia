@@ -3,7 +3,7 @@ import React from 'react';
 const Homepage = () => {
     return (
         <div className='bg-slate-200'>
-            <div className='container mx-auto py-10 min-h-screen'>
+            <div className='container mx-auto py-10 min-h-[80vh]'>
                 Homepage
             </div>
         </div>

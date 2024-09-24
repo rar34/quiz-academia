@@ -56,7 +56,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <Link href={"/"} className="btn btn-ghost text-gray-200 text-3xl">Quiz<span className='text-secondary'>Academia</span></Link>
+                    <Link href={"/"} className="font-bold border-2 border-gray-200 rounded-md p-2 text-gray-200 text-3xl">Quiz<span className='text-secondary'>Academia</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <div className='flex gap-6 text-xl text-white'>
