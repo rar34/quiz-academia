@@ -2,8 +2,10 @@ import React from 'react';
 
 const Homepage = () => {
     return (
-        <div className='container mx-auto my-10'>
-            Homepage
+        <div className='bg-slate-200'>
+            <div className='container mx-auto py-10 min-h-screen'>
+                Homepage
+            </div>
         </div>
     );
 };

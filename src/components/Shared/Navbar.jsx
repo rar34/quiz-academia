@@ -28,7 +28,7 @@ const Navbar = () => {
         },
     ]
     return (
-        <div className='border-red-600 border-b-4 bg-primary py-4'>
+        <div className='border-secondary border-b-4 bg-primary py-4'>
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -48,27 +48,27 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content text-white bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {
                                 navItems.map(item => (
-                                    <Link className={`${pathName === item.path && 'text-red-500 border-b-2 border-red-600'}`} key={item.path} href={item.path}>{item.title}</Link>
+                                    <Link className={`${pathName === item.path && 'text-secondary border-b-2 border-secondary'} `} key={item.path} href={item.path}>{item.title}</Link>
                                 ))
                             }
                         </ul>
                     </div>
-                    <Link href={"/"} className="btn btn-ghost text-3xl">Quiz<span className='text-red-600'>Academia</span></Link>
+                    <Link href={"/"} className="btn btn-ghost text-gray-200 text-3xl">Quiz<span className='text-secondary'>Academia</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <div className='flex gap-6 text-xl'>
+                    <div className='flex gap-6 text-xl text-white'>
                         {
                             navItems.map(item => (
-                                <Link className={`${pathName === item.path && 'text-red-600 border-b-2 border-red-600'}`} key={item.path} href={item.path}>{item.title}</Link>
+                                <Link className={`${pathName === item.path && 'text-secondary border-b-2 border-secondary'} `} key={item.path} href={item.path}>{item.title}</Link>
                             ))
                         }
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-outline btn-error">Login</a>
+                    <a className="btn btn-outline btn-secondary">Login</a>
                 </div>
             </div>
         </div>

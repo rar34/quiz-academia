@@ -21,10 +21,14 @@ module.exports = {
       {
         quizAcademia: {
           "primary": "#6A5AE1",
-          "secondary": "#f6d860",
-          "accent": "#37cdbe",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
+          "secondary": "#5AE178",
+
+          ".btn-secondary": {
+            "color": "#fff"
+          },
+          ".btn-outline.btn-secondary:hover" : {
+            "color": "#fff"
+          }
         },
       },
       "dark",
