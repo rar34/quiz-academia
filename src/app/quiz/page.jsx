@@ -42,7 +42,7 @@ const QuizPage = () => {
 
     const currentQuestion = quizData[currentQuestionIndex];
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto px-4'>
             <h1 className='text-3xl font-bold text-secondary my-10'>Quiz Section</h1>
             <h2 className='text-xl mb-3 font-semibold'>{currentQuestion.questionText}</h2>
             <div className='flex flex-col'>
