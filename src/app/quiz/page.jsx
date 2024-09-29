@@ -33,7 +33,7 @@ const QuizPage = () => {
 
     if (showResults) {
         return (
-            <div className='my-10 container mx-auto min-h-[70vh]'>
+            <div className='my-10 container px-4 mx-auto min-h-[70vh]'>
                 <h1 className='text-3xl text-secondary font-semibold mb-4'>Quiz Results</h1>
                 <p className='font-bold'>Your score is: {score} out of {quizData.length}</p>
             </div>
