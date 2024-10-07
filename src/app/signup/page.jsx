@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Login = () => {
+const SignUp = () => {
     return (
         <div className="my-20">
             <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -12,22 +12,29 @@ const Login = () => {
 
                 <form className="mt-6">
                     <div>
-                        <label for="username" className="block text-sm text-gray-800 dark:text-gray-200">Email</label>
-                        <input type="email" placeholder="Your email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                        <label for="username" className="block text-sm text-gray-800 dark:text-gray-200">Name</label>
+                        <input type="email" placeholder="Your name" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
                     </div>
 
+                    <div className="mt-4">
+                        <div className="flex items-center justify-between">
+                            <label for="password" className="block text-sm text-gray-800 dark:text-gray-200">Email</label>
+                        </div>
+
+                        <input type="email" placeholder="Your email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                    </div>
                     <div className="mt-4">
                         <div className="flex items-center justify-between">
                             <label for="password" className="block text-sm text-gray-800 dark:text-gray-200">Password</label>
                             <a href="#" className="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forget Password?</a>
                         </div>
 
-                        <input type="password" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                        <input type="password" placeholder="Your password" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
                     </div>
 
                     <div className="mt-6">
                         <button className="w-full btn btn-primary">
-                            Sign In
+                            Sign Up
                         </button>
                     </div>
                 </form>
@@ -60,10 +67,10 @@ const Login = () => {
                     </a>
                 </div>
 
-                <p className="mt-8 text-xs font-light text-center text-gray-400"> Don&apos;t have an account? <Link href="/signup" className="font-medium text-gray-700 ">Create One</Link></p>
+                <p className="mt-8 text-xs font-light text-center text-gray-400"> Already have an account? <Link href="/login" className="font-medium text-gray-700 ">Login</Link></p>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default SignUp;
