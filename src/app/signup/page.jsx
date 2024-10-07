@@ -3,25 +3,28 @@ import Link from 'next/link';
 import React from 'react';
 
 const SignUp = () => {
+
+    
+
     return (
         <div className="my-20">
-            <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md">
                 <div className="flex justify-center mx-auto">
                     <Image width={50} height={50} className="w-auto h-7 sm:h-8" src="https://merakiui.com/images/logo.svg" alt="" />
                 </div>
 
                 <form className="mt-6">
                     <div>
-                        <label for="username" className="block text-sm text-gray-800 dark:text-gray-200">Name</label>
-                        <input type="email" placeholder="Your name" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                        <label for="name" className="block text-sm text-gray-800 dark:text-gray-200">Name</label>
+                        <input type="text" name="name" placeholder="Your name" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
                     </div>
 
                     <div className="mt-4">
                         <div className="flex items-center justify-between">
-                            <label for="password" className="block text-sm text-gray-800 dark:text-gray-200">Email</label>
+                            <label for="email" className="block text-sm text-gray-800">Email</label>
                         </div>
 
-                        <input type="email" placeholder="Your email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                        <input type="email" name="email" placeholder="Your email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
                     </div>
                     <div className="mt-4">
                         <div className="flex items-center justify-between">
@@ -29,7 +32,7 @@ const SignUp = () => {
                             <a href="#" className="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forget Password?</a>
                         </div>
 
-                        <input type="password" placeholder="Your password" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                        <input type="password" name="password" placeholder="Your password" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
                     </div>
 
                     <div className="mt-6">
