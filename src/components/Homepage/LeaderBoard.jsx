@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const LeaderBoard = () => {
+const Leaderboard = () => {
     return (
         <div className="container mx-auto">
             <div className="card card-side bg-base-100 shadow-xl">
@@ -22,4 +22,4 @@ const LeaderBoard = () => {
     );
 };
 
-export default LeaderBoard;
+export default Leaderboard;
