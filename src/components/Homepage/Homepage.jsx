@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
-import LeaderBoard from './Leaderboard';
+import LeaderBoard from './LeaderBoard';
 
 const Homepage = () => {
     return (
