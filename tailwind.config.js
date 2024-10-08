@@ -21,7 +21,7 @@ module.exports = {
       {
         quizAcademia: {
           "primary": "#6A5AE1",
-          "secondary": "#5AE178",
+          "secondary": "#60A5FA",
 
           ".btn-secondary": {
             "color": "#fff"
