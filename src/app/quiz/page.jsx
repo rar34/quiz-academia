@@ -42,33 +42,35 @@ const QuizPage = () => {
 
     const currentQuestion = quizData[currentQuestionIndex];
     return (
-        <div className='container mx-auto px-4'>
-            <h1 className='text-3xl font-bold text-secondary my-10'>Quiz Section</h1>
-            <h2 className='text-xl mb-3 font-semibold'>{currentQuestion.questionText}</h2>
-            <div className='flex flex-col'>
-                {currentQuestion.options.map((option) => (
-                    <label className='mb-2' key={option.optionId}>
-                        <input className='mr-2'
-                            type="radio"
-                            name={currentQuestion.questionId}
-                            value={option.optionId}
-                            checked={userAnswers[currentQuestion.questionId] === option.optionId}
-                            onChange={() => handleOptionChange(currentQuestion.questionId, option.optionId)}
-                        />
-                        {option.optionText}
-                    </label>
-                ))}
-            </div>
+        <div className='max-w-4xl min-h-[65vh] mx-auto px-4'>
             <div>
-                {currentQuestionIndex > 0 && (
-                    <button className='btn btn-secondary btn-sm mt-4 mb-6 mr-4' onClick={handlePreviousQuestion}>Previous</button>
-                )}
-                {currentQuestionIndex < quizData.length - 1 && (
-                    <button className='btn btn-secondary btn-sm mt-4 mb-6' onClick={handleNextQuestion}>Next</button>
-                )}
-                {currentQuestionIndex === quizData.length - 1 && (
-                    <button className='btn btn-primary btn-sm mt-4 mb-6 ml-4' onClick={handleSubmitQuiz}>Submit Quiz</button>
-                )}
+                <h1 className='text-3xl font-bold text-secondary my-10'>Quiz Section</h1>
+                <h2 className='text-xl mb-3 font-semibold'>{currentQuestion.questionText}</h2>
+                <div className='flex flex-col'>
+                    {currentQuestion.options.map((option) => (
+                        <label className='mb-2' key={option.optionId}>
+                            <input className='mr-2'
+                                type="radio"
+                                name={currentQuestion.questionId}
+                                value={option.optionId}
+                                checked={userAnswers[currentQuestion.questionId] === option.optionId}
+                                onChange={() => handleOptionChange(currentQuestion.questionId, option.optionId)}
+                            />
+                            {option.optionText}
+                        </label>
+                    ))}
+                </div>
+                <div>
+                    {currentQuestionIndex > 0 && (
+                        <button className='btn btn-secondary btn-sm mt-4 mb-6 mr-4' onClick={handlePreviousQuestion}>Previous</button>
+                    )}
+                    {currentQuestionIndex < quizData.length - 1 && (
+                        <button className='btn btn-secondary btn-sm mt-4 mb-6' onClick={handleNextQuestion}>Next</button>
+                    )}
+                    {currentQuestionIndex === quizData.length - 1 && (
+                        <button className='btn btn-primary btn-sm mt-4 mb-6 ml-4' onClick={handleSubmitQuiz}>Submit Quiz</button>
+                    )}
+                </div>
             </div>
         </div>
     );
@@ -187,5 +189,5 @@ const quizData = [
         ],
         correctOptionId: 'c'
     },
-    
+
 ];

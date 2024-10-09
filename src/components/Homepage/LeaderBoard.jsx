@@ -10,7 +10,7 @@ const Leaderboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>
@@ -21,7 +21,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>
@@ -32,7 +32,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>
@@ -43,7 +43,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>
@@ -54,7 +54,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>
@@ -65,7 +65,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>
@@ -76,7 +76,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="flex items-center rounded-lg bg-base-100 border-2 border-secondary p-4">
                     <figure>
-                        <Image height={100} width={100}
+                        <Image height={70} width={70}
                             src="https://i.ibb.co.com/FDpGqc0/pp.jpg"
                             alt="Movie" />
                     </figure>

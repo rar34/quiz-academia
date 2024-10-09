@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -56,7 +57,10 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <Link href={"/"} className="font-bold border-2 border-gray-200 rounded-md p-2 text-gray-200 text-xl md:text-3xl">Quiz<span className='text-secondary'>Academia</span></Link>
+                    {/* <Link href={"/"} className="font-bold border-2 border-gray-200 rounded-md p-2 text-gray-200 text-xl md:text-3xl">Quiz<span className='text-secondary'>Academia</span></Link> */}
+                    <Link href="/">
+                            <Image src="/assets/quiz-academia.png" height={100} width={300} alt="quiz-academia" />
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <div className='flex gap-6 text-xl text-white'>
@@ -68,7 +72,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <Link href={"/login"} className="btn btn-outline btn-secondary">Login</Link>
+                    <Link href={"/login"} className="btn btn-outline border-white text-blue-300">Login</Link>
                 </div>
             </div>
         </div>
