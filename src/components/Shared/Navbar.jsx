@@ -29,7 +29,7 @@ const Navbar = () => {
         },
     ]
     return (
-        <div className='border-secondary border-b-4 bg-primary py-4'>
+        <div className='sticky top-0 bg-primary py-4'>
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
