@@ -3,7 +3,7 @@ import React from 'react';
 
 const Leaderboard = () => {
     return (
-        <div className="container mx-auto my-14">
+        <div className="container mx-auto px-2 my-14">
             <h2 className="text-5xl mt-14 text-center  pb-2 font-semibold text-primary">Leader Board</h2>
             <h4 className="text-2xl font-medium text-center text-gray-800">Top 10 participants in this week.</h4>
             <hr className="my-10 border"/>
