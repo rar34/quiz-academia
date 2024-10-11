@@ -20,8 +20,8 @@ module.exports = {
     themes: [
       {
         quizAcademia: {
-          "primary": "#6A5AE1",
-          "secondary": "#60A5FA",
+          "primary": "#451952",
+          "secondary": "#F39F5A",
 
           ".btn-secondary": {
             "color": "#fff"

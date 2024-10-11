@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Quiz Academia",
-  description: "A online quiz platform for students",
+  description: "A best online quiz platform for students",
 };
 
 export default function RootLayout({ children }) {

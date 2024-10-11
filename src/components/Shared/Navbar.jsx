@@ -72,7 +72,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <Link href={"/login"} className="btn btn-outline border-white text-blue-300">Login</Link>
+                    <Link href={"/login"} className="btn btn-outline btn-secondary">Login</Link>
                 </div>
             </div>
         </div>
