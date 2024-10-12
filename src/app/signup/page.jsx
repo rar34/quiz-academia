@@ -1,11 +1,22 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaSquareFacebook } from 'react-icons/fa6';
 
 const SignUp = () => {
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        const form = e.target;
 
-    
+        const newUser = {
+            name: form.name.value,
+            email: form.email.value,
+            password: form.password.value
+        }
+        console.log(newUser)
+    }
+
 
     return (
         <div className="my-20">
@@ -14,7 +25,7 @@ const SignUp = () => {
                     <Image width={50} height={50} className="w-auto h-7 sm:h-8" src="https://merakiui.com/images/logo.svg" alt="" />
                 </div>
 
-                <form className="mt-6">
+                <form onSubmit={handleSignUp} className="mt-6">
                     <div>
                         <label for="name" className="block text-sm text-gray-800 dark:text-gray-200">Name</label>
                         <input type="text" name="name" placeholder="Your name" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />

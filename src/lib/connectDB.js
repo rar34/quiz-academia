@@ -1,3 +1,5 @@
+import { MongoClient } from "mongodb";
+
 let db;
 export const connectDB = async () => {
     if (db) {
