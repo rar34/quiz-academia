@@ -21,7 +21,7 @@ const Banner = () => {
                         </div>
 
                         <div className="flex items-center justify-end w-full mt-6 lg:mt-0 lg:w-1/2">
-                            <Image height={800} width={1200} className="w-3/4 h-3/4 lg:max-w-3xl" src="https://i.ibb.co.com/nQVbKxb/quiz.png" alt="banner image" />
+                            <Image height={800} width={1200} className="w-3/4 h-3/4 lg:max-w-3xl" src="https://i.ibb.co.com/PjVg1bT/quiz.png" alt="banner image" />
                         </div>
                     </div>
                 </div>
