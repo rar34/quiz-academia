@@ -1,8 +1,10 @@
 "use client"
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { signOut } from "next-auth/react"
 
 const Navbar = () => {
     const pathName = usePathname();
@@ -26,8 +28,12 @@ const Navbar = () => {
         {
             title: 'Profile',
             path: '/profile'
-        },
+        }
     ]
+
+    const session = useSession()
+    // console.log(session)
+
     return (
         <div className='sticky top-0 bg-primary py-4 shadow-md'>
             <div className="navbar container mx-auto">
@@ -72,7 +78,11 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <Link href={"/login"} className="btn btn-outline btn-secondary">Login</Link>
+                    <p className='text-white mr-4 text-lg'>{session?.data?.user?.name}</p>
+                    {
+                        !session.data ? <Link href={"/login"} className="btn btn-outline btn-secondary">Login</Link>:
+                        <button className="btn btn-outline btn-secondary" onClick={()=> signOut()}>Logout</button>
+                    }
                 </div>
             </div>
         </div>
