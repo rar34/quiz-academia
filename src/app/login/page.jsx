@@ -1,10 +1,31 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import { signIn } from "next-auth/react"
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        const resp =await signIn("credentials", {
+            email, password, redirect: false
+        })
+        if(resp.status === 200){
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Login Successful",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+    }
     return (
         <div className="my-20">
             <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md border-2 border-primary">
@@ -12,7 +33,7 @@ const Login = () => {
                     <Image width={50} height={50} className="w-auto h-7 sm:h-8" src="https://merakiui.com/images/logo.svg" alt="" />
                 </div>
 
-                <form className="mt-6">
+                <form onSubmit={handleLogin} className="mt-6">
                     <div>
                         <label for="email" className="block text-sm text-gray-800">Email</label>
                         <input name="email" type="email" placeholder="Your email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
@@ -24,7 +45,7 @@ const Login = () => {
                             <a href="#" className="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forget Password?</a>
                         </div>
 
-                        <input type="password" placeholder="Your password" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
+                        <input name='password' type="password" placeholder="Your password" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg" />
                     </div>
 
                     <div className="mt-6">

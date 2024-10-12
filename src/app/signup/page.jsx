@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaSquareFacebook } from 'react-icons/fa6';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
     const handleSignUp = async (e) => {
@@ -25,6 +26,13 @@ const SignUp = () => {
         console.log(resp)
         if (resp.status === 200) {
             e.target.reset()
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Sign up Successful",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }
     }
 
