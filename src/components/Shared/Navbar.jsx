@@ -36,7 +36,7 @@ const Navbar = () => {
 
     return (
         <div className='sticky top-0 bg-primary py-4 shadow-md'>
-            <div className="navbar container mx-auto">
+            <div className="navbar max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -78,7 +78,9 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <p className='text-white mr-4 text-lg'>{session?.data?.user?.name}</p>
+                    {
+                        session.data && <p className='text-white mr-4 text-lg'>Hi, <span className='italic'>{session?.data?.user?.name}</span></p>
+                    }
                     {
                         !session.data ? <Link href={"/login"} className="btn btn-outline btn-secondary">Login</Link>:
                         <button className="btn btn-outline btn-secondary" onClick={()=> signOut()}>Logout</button>

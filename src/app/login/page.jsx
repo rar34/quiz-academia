@@ -6,8 +6,10 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react"
 import Swal from 'sweetalert2';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
+    const router = useRouter();
     const handleLogin = async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -17,6 +19,7 @@ const Login = () => {
             email, password, redirect: false
         })
         if(resp.status === 200){
+            router.push("/");
             Swal.fire({
                 position: "top-end",
                 icon: "success",
