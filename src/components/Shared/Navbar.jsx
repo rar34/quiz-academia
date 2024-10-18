@@ -37,7 +37,7 @@ const Navbar = () => {
 
     // if (pathName.includes('dashboard')) {
     //     return (
-    //         <div className='bg-primary min-h-[65vh] p-4 flex gap-6 justify-center text-center text-white'>
+    //         <div className='bg-primary p-4 flex gap-6 justify-center text-center text-white'>
     //             {/* <Link href={"/"}>Home</Link> */}
     //             <Dashboard />
     //         </div>
