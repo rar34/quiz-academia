@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import { signOut } from "next-auth/react"
-import Dashboard from '@/app/dashboard/page';
+import Dashboard from '@/app/(dashboard)/dashboard/page';
 
 const Navbar = () => {
     const pathName = usePathname();
@@ -25,24 +25,48 @@ const Navbar = () => {
         {
             title: 'Syllabus',
             path: '/syllabus'
+        }
+    ]
+    const dashboardItems = [
+        {
+            title: 'Home',
+            path: '/'
         },
         {
             title: 'Profile',
             path: '/profile'
+        },
+        {
+            title: 'Add a Quiz',
+            path: '/addquiz'
+        },
+        {
+            title: 'Manage Quiz',
+            path: '/managequiz'
         }
     ]
 
     const session = useSession()
     // console.log(session)
 
-    // if (pathName.includes('dashboard')) {
-    //     return (
-    //         <div className='bg-primary p-4 flex gap-6 justify-center text-center text-white'>
-    //             {/* <Link href={"/"}>Home</Link> */}
-    //             <Dashboard />
-    //         </div>
-    //     )
-    // }
+    if (pathName.includes('dashboard')) {
+        return (
+            <div className='min-h-[70vh] max-w-7xl mx-auto'>
+                <div className='flex gap-6'>
+                    <div className='bg-primary flex flex-col gap-4 text-white p-6 min-h-[85vh] w-1/4'>
+                    {
+                        dashboardItems.map(item => (
+                            <Link className={`${pathName === item.path && 'text-secondary border-b-2 border-secondary'} `} key={item.path} href={item.path}>{item.title}</Link>
+                        ))
+                    }
+                    </div>
+                    <div className='w-3/4 p-14'>
+                        content
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className='sticky top-0 bg-primary py-4 shadow-md'>
@@ -111,7 +135,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li><Link className="hover:text-secondary transition" href={"/dashboard"}>Dashboard</Link></li>
-                                    <li><button className="hover:text-secondary transition" onClick={()=> signOut()}>Logout</button></li>
+                                    <li><button className="hover:text-secondary transition" onClick={() => signOut()}>Logout</button></li>
                                 </ul>
                             </div>
                     }

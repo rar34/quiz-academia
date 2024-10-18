@@ -23,13 +23,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="quizAcademia">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-        <AuthProvider>
+      <AuthProvider>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
           <Navbar />
           {children}
           <Footer />
-        </AuthProvider>
-      </body>
+        </body>
+      </AuthProvider>
     </html>
   );
 }
