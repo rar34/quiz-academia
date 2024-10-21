@@ -5,7 +5,7 @@ import React from 'react';
 const QuizPage = () => {
 
     return (
-        <div className='max-w-4xl min-h-[65vh] mx-auto my-10 px-4'>
+        <div className='max-w-7xl min-h-[65vh] mx-auto my-10 px-4'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 <Link href={"/ict"}>
                     <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>ICT</h2>
