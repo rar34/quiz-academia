@@ -8,7 +8,9 @@ const page = () => {
                 <Link href={"/syllabus/ict"}>
                     <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>ICT</h2>
                 </Link>
-                <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>Bangla</h2>
+                <Link href={"/syllabus/bangla"}>
+                    <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>Bangla</h2>
+                </Link>
                 <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>English</h2>
                 <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>Mathematics</h2>
                 <h2 className='p-14 flex justify-center items-center hover:bg-primary hover:text-white text-3xl font-bold bg-secondary'>Physics</h2>
